@@ -1,4 +1,4 @@
-package main.Features;
+package Main.Features;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;

@@ -1,4 +1,4 @@
-package main.Features;
+package Main.Features;
 
 import javax.crypto.*;
 import javax.crypto.spec.PBEKeySpec;
