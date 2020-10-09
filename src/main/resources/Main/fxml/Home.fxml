@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.Controllers.HomeCon">
+   <children>
+      <TabPane layoutX="184.0" layoutY="79.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+            <Tab text="Home">
+                <fx:include source="Auxy.fxml" />
+            </Tab>
+          <Tab text="Browser">
+              <fx:include source="Browser.fxml" />
+          </Tab>
+          <Tab text="Apps" >
+              <fx:include source="Apps.fxml" />
+          </Tab>
+            <Tab text="Communication">
+                <fx:include source="Communication.fxml" />
+            </Tab>
+            <Tab text="Tools" >
+                <fx:include source="Tools.fxml" />
+            </Tab>
+            <Tab text="Homework" >
+                <fx:include source="Homework.fxml" />
+            </Tab>
+            <Tab text="Help">
+                <fx:include source="Help.fxml" />
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
