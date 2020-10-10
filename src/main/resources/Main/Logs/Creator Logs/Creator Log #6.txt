@@ -1,0 +1,56 @@
+0.0.2.4 Nightly Alpha
+ _________  ___  ________  ________  ___  ________           ________  ___  ___     ___    ___ ___  ___       ___  ___  ___  _____ ______      
+|\___   ___\\  \|\   ____\|\   __  \|\  \|\   ____\         |\   __  \|\  \|\  \   |\  \  /  /|\  \|\  \     |\  \|\  \|\  \|\   _ \  _   \    
+\|___ \  \_\ \  \ \  \___|\ \  \|\  \ \  \ \  \___|_        \ \  \|\  \ \  \\\  \  \ \  \/  / | \  \ \  \    \ \  \ \  \\\  \ \  \\\__\ \  \   
+     \ \  \ \ \  \ \  \  __\ \   _  _\ \  \ \_____  \        \ \   __  \ \  \\\  \  \ \    / / \ \  \ \  \    \ \  \ \  \\\  \ \  \\|__| \  \  
+      \ \  \ \ \  \ \  \|\  \ \  \\  \\ \  \|____|\  \        \ \  \ \  \ \  \\\  \  /     \/   \ \  \ \  \____\ \  \ \  \\\  \ \  \    \ \  \ 
+       \ \__\ \ \__\ \_______\ \__\\ _\\ \__\____\_\  \        \ \__\ \__\ \_______\/  /\   \    \ \__\ \_______\ \__\ \_______\ \__\    \ \__\
+        \|__|  \|__|\|_______|\|__|\|__|\|__|\_________\        \|__|\|__|\|_______/__/ /\ __\    \|__|\|_______|\|__|\|_______|\|__|     \|__|
+                                            \|_________|                           |__|/ \|__|                                                 
+   ______                __                __           
+  / ____/_______  ____ _/ /_____  _____   / /___  ____ _
+ / /   / ___/ _ \/ __ `/ __/ __ \/ ___/  / / __ \/ __ `/
+/ /___/ /  /  __/ /_/ / /_/ /_/ / /     / / /_/ / /_/ / 
+\____/_/   \___/\__,_/\__/\____/_/     /_/\____/\__, /  
+                                               /____/   
+                                                                                                                                               
+========================================================
+9/07/2020 - Neopect {Creator Log #6}
+
+
+
+About another break/month later, I'm back with some cool 
+features. I added the mac app installation features a 
+while back. After some testing, I found it didn't do what 
+I wanted it to do. So I sat it aside for a while and did 
+other things. I will be getting back to it soon.
+
+I spent a while experimenting with different tools and 
+such to see what I could build. The big thing being SQL, 
+which is a filesystem that stores data as tables and 
+indexes. With SQL, I'm able to save a lot of something 
+with ease, which is where the app collection and Project 
+Planner come in place. The Project Planner is based on 
+my Excel sheet I made to organize my projects, but it's 
+still missing some color coding. The App Collection tool 
+is to help users and myself open several applications 
+for a work environment or class with cluttering a desktop 
+or spending time searching for it. You can have an infinite 
+number of tasks, collections, links, whatever. I plan on 
+moving the Tab Opener to that model later on.
+
+I hope I'll have time to continue this as school starts 
+again. I'm getting closer to a point where I'd be happy 
+releasing this. This recent update cleared about 30+ 
+bugs and suggestions I had stored on the project task 
+list. This update technically should be a stable update 
+because it runs nearly perfectly but, I want to wait 
+till I get a few more features in to make a full stable 
+release. I'm looking at moving to maven to make dependencies 
+and builds easier but, I'll see how it goes. I want to 
+simplify my classes first before going to maven to help 
+reduce the chance of something going wrong, hense the 
+Spring Cleaning update.
+
+See you later,
+Neopect

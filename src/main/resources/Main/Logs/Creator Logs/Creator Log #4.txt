@@ -1,0 +1,38 @@
+
+ _________  ___  ________  ________  ___  ________           ________  ___  ___     ___    ___ ___  ___       ___  ___  ___  _____ ______      
+|\___   ___\\  \|\   ____\|\   __  \|\  \|\   ____\         |\   __  \|\  \|\  \   |\  \  /  /|\  \|\  \     |\  \|\  \|\  \|\   _ \  _   \    
+\|___ \  \_\ \  \ \  \___|\ \  \|\  \ \  \ \  \___|_        \ \  \|\  \ \  \\\  \  \ \  \/  / | \  \ \  \    \ \  \ \  \\\  \ \  \\\__\ \  \   
+     \ \  \ \ \  \ \  \  __\ \   _  _\ \  \ \_____  \        \ \   __  \ \  \\\  \  \ \    / / \ \  \ \  \    \ \  \ \  \\\  \ \  \\|__| \  \  
+      \ \  \ \ \  \ \  \|\  \ \  \\  \\ \  \|____|\  \        \ \  \ \  \ \  \\\  \  /     \/   \ \  \ \  \____\ \  \ \  \\\  \ \  \    \ \  \ 
+       \ \__\ \ \__\ \_______\ \__\\ _\\ \__\____\_\  \        \ \__\ \__\ \_______\/  /\   \    \ \__\ \_______\ \__\ \_______\ \__\    \ \__\
+        \|__|  \|__|\|_______|\|__|\|__|\|__|\_________\        \|__|\|__|\|_______/__/ /\ __\    \|__|\|_______|\|__|\|_______|\|__|     \|__|
+                                            \|_________|                           |__|/ \|__|                                                 
+   ______                __                __           
+  / ____/_______  ____ _/ /_____  _____   / /___  ____ _
+ / /   / ___/ _ \/ __ `/ __/ __ \/ ___/  / / __ \/ __ `/
+/ /___/ /  /  __/ /_/ / /_/ /_/ / /     / / /_/ / /_/ / 
+\____/_/   \___/\__,_/\__/\____/_/     /_/\____/\__, /  
+                                               /____/   
+                                                                                                                                               
+========================================================
+7/30/2020 - Neopect {Creator Log #4}
+
+
+
+Hello. It's been a while since I've looked back at the project. 
+I'm hoping to get back into the project and get a somewhat 
+functional application before school starts up again.
+
+I'm just going to focus on a more legit save system. I am now 
+going to use JSON as my file system for saved information as 
+well as changing how TA reads and writes data to file. Once 
+this issue is fixed, it will make further development much 
+easier. The three big things that this will fix is that 1, 
+the setup panel will show up first to the new user, 2, The app 
+will know if it been copied into a new computer and to erase 
+its data, 3, The browser links and ticks will be properly 
+saved between launches.
+
+Afterward, I will be working on finishing the browser panel, 
+leaving the in-app browser out until later. Then build some 
+basic power control features in the app.

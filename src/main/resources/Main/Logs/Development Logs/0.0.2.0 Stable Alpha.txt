@@ -1,0 +1,55 @@
+=================================================================================================================================================
+ _________  ___  ________  ________  ___  ________           ________  ___  ___     ___    ___ ___  ___       ___  ___  ___  _____ ______      
+|\___   ___\\  \|\   ____\|\   __  \|\  \|\   ____\         |\   __  \|\  \|\  \   |\  \  /  /|\  \|\  \     |\  \|\  \|\  \|\   _ \  _   \    
+\|___ \  \_\ \  \ \  \___|\ \  \|\  \ \  \ \  \___|_        \ \  \|\  \ \  \\\  \  \ \  \/  / | \  \ \  \    \ \  \ \  \\\  \ \  \\\__\ \  \   
+     \ \  \ \ \  \ \  \  __\ \   _  _\ \  \ \_____  \        \ \   __  \ \  \\\  \  \ \    / / \ \  \ \  \    \ \  \ \  \\\  \ \  \\|__| \  \  
+      \ \  \ \ \  \ \  \|\  \ \  \\  \\ \  \|____|\  \        \ \  \ \  \ \  \\\  \  /     \/   \ \  \ \  \____\ \  \ \  \\\  \ \  \    \ \  \ 
+       \ \__\ \ \__\ \_______\ \__\\ _\\ \__\____\_\  \        \ \__\ \__\ \_______\/  /\   \    \ \__\ \_______\ \__\ \_______\ \__\    \ \__\
+        \|__|  \|__|\|_______|\|__|\|__|\|__|\_________\        \|__|\|__|\|_______/__/ /\ __\    \|__|\|_______|\|__|\|_______|\|__|     \|__|
+                                            \|_________|                           |__|/ \|__|                                                 
+                                                                                                                                               
+=================================================================================================================================================
+
+Tigris Auxilium
+Development Log #5
+Status: Stable
+6/30/2020 | 0.0.2.0 | "Just get on  with it"
+======================================================
+---------
+Overview:
+---------
+Mainly working on clearing on meaningless errors and unused data. Also working on documentation to make it easier for me to read. 
+Working on trying to get the panels to talk to each other.
+
+-------------
+New Features:
+-------------
+-User Setup Panel now shows at first launch
+-You can open a max of 6 browser tabs on your web browser
+-You can save your list of browser tabs and if you enabled them in a save file
+
+-----------
+Known Bugs:
+-----------
+-Setup Panel doesn't leave after hitting finished
+-Errors from unused vars and functions still left over
+-No default text when first launch browser tab page
+-Browser doesn't always save check boxe's state
+-Browser Tabs don't open on button
+
+-------------
+Fixed Issues:
+-------------
+-UserSetup Panel now appears
+-Mis. bugs and errors
+
+------
+Plans:
+------
+-Start combining classes that can be done for simplicity and make instancing/referencing easier
+-Prompt message for the nickname of links
+-Remotely close & open tabs from a single tab
+-Make Save system more dynamic
+-Have title bar greet the user when booted
+-PC Power control
+-Minor file explorer 

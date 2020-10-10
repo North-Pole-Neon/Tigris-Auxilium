@@ -1,0 +1,54 @@
+=================================================================================================================================================
+ _________  ___  ________  ________  ___  ________           ________  ___  ___     ___    ___ ___  ___       ___  ___  ___  _____ ______      
+|\___   ___\\  \|\   ____\|\   __  \|\  \|\   ____\         |\   __  \|\  \|\  \   |\  \  /  /|\  \|\  \     |\  \|\  \|\  \|\   _ \  _   \    
+\|___ \  \_\ \  \ \  \___|\ \  \|\  \ \  \ \  \___|_        \ \  \|\  \ \  \\\  \  \ \  \/  / | \  \ \  \    \ \  \ \  \\\  \ \  \\\__\ \  \   
+     \ \  \ \ \  \ \  \  __\ \   _  _\ \  \ \_____  \        \ \   __  \ \  \\\  \  \ \    / / \ \  \ \  \    \ \  \ \  \\\  \ \  \\|__| \  \  
+      \ \  \ \ \  \ \  \|\  \ \  \\  \\ \  \|____|\  \        \ \  \ \  \ \  \\\  \  /     \/   \ \  \ \  \____\ \  \ \  \\\  \ \  \    \ \  \ 
+       \ \__\ \ \__\ \_______\ \__\\ _\\ \__\____\_\  \        \ \__\ \__\ \_______\/  /\   \    \ \__\ \_______\ \__\ \_______\ \__\    \ \__\
+        \|__|  \|__|\|_______|\|__|\|__|\|__|\_________\        \|__|\|__|\|_______/__/ /\ __\    \|__|\|_______|\|__|\|_______|\|__|     \|__|
+                                            \|_________|                           |__|/ \|__|                                                 
+                                                                                                                                               
+=================================================================================================================================================
+
+Tigris Auxilium
+Development Log #7
+Status: Nightly
+8/12/2020 | 0.0.2.2 | "I'll install that for ya"
+======================================================
+---------
+Overview:
+---------
+I've been working on the ability to install mac applications 
+with the ease of a button. Also, a little housekeeping in the 
+back to make things look cleaner. This update is a little weird because
+I'm on vacation and not with my macbook.
+-------------
+New Features:
+-------------
+* You can install .apps / .dmg / .pkg now with ease from the apps tab (Untested)
+* Hide all visible applications from the tools tab (Untested)
+* When TA detects a new host device it will wipe its data and start fresh (Outdated)
+* TA will greet you from the title bar :)
+
+-----------
+Known Bugs:
+-----------
+* Setup Panel doesn't leave after hitting finished
+* No default text when first launch browser tab page
+* Program crashes if Setup page is left with blank information
+* Greeting text will return null instead of showing the name
+* Web site links must have the full www.com address
+
+-------------
+Fixed Issues:
+-------------
+* List of Browser tabs will be properly remembered
+* Mis. bugs and errors
+
+------
+Plans:
+------
+* Start combining classes that can be done for simplicity and make instancing/referencing easier
+* Prompt message for the nickname of links
+* Power Controls
+* App collections

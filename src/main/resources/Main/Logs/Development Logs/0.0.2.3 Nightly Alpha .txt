@@ -1,0 +1,48 @@
+=================================================================================================================================================
+ _________  ___  ________  ________  ___  ________           ________  ___  ___     ___    ___ ___  ___       ___  ___  ___  _____ ______      
+|\___   ___\\  \|\   ____\|\   __  \|\  \|\   ____\         |\   __  \|\  \|\  \   |\  \  /  /|\  \|\  \     |\  \|\  \|\  \|\   _ \  _   \    
+\|___ \  \_\ \  \ \  \___|\ \  \|\  \ \  \ \  \___|_        \ \  \|\  \ \  \\\  \  \ \  \/  / | \  \ \  \    \ \  \ \  \\\  \ \  \\\__\ \  \   
+     \ \  \ \ \  \ \  \  __\ \   _  _\ \  \ \_____  \        \ \   __  \ \  \\\  \  \ \    / / \ \  \ \  \    \ \  \ \  \\\  \ \  \\|__| \  \  
+      \ \  \ \ \  \ \  \|\  \ \  \\  \\ \  \|____|\  \        \ \  \ \  \ \  \\\  \  /     \/   \ \  \ \  \____\ \  \ \  \\\  \ \  \    \ \  \ 
+       \ \__\ \ \__\ \_______\ \__\\ _\\ \__\____\_\  \        \ \__\ \__\ \_______\/  /\   \    \ \__\ \_______\ \__\ \_______\ \__\    \ \__\
+        \|__|  \|__|\|_______|\|__|\|__|\|__|\_________\        \|__|\|__|\|_______/__/ /\ __\    \|__|\|_______|\|__|\|_______|\|__|     \|__|
+                                            \|_________|                           |__|/ \|__|                                                 
+                                                                                                                                               
+=================================================================================================================================================
+
+Tigris Auxilium
+Development Log #8
+Status: Nightly
+9/06/2020 | 0.0.2.3 | "Project Planner"
+======================================================
+---------
+Overview:
+---------
+Taken another break, got back into things again. Built a Project Planner
+using sql so its supper easy to use.
+-------------
+New Features:
+-------------
+* Project Planner is a new feature to help organize your school project tasks
+
+-----------
+Known Bugs:
+-----------
+* Setup Panel doesn't leave after hitting finished
+* No default text when first launch browser tab page
+* Program crashes if Setup page is left with blank information
+* Greeting text will return null instead of showing the name
+* Web site links must have the full www.com address
+* App installation errors out
+
+-------------
+Fixed Issues:
+-------------
+* Mis. bugs and errors
+
+------
+Plans:
+------
+* Power controls
+* App collections
+* Speed application boot and load faster

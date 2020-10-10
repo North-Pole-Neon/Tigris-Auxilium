@@ -1,0 +1,50 @@
+=================================================================================================================================================
+ _________  ___  ________  ________  ___  ________           ________  ___  ___     ___    ___ ___  ___       ___  ___  ___  _____ ______      
+|\___   ___\\  \|\   ____\|\   __  \|\  \|\   ____\         |\   __  \|\  \|\  \   |\  \  /  /|\  \|\  \     |\  \|\  \|\  \|\   _ \  _   \    
+\|___ \  \_\ \  \ \  \___|\ \  \|\  \ \  \ \  \___|_        \ \  \|\  \ \  \\\  \  \ \  \/  / | \  \ \  \    \ \  \ \  \\\  \ \  \\\__\ \  \   
+     \ \  \ \ \  \ \  \  __\ \   _  _\ \  \ \_____  \        \ \   __  \ \  \\\  \  \ \    / / \ \  \ \  \    \ \  \ \  \\\  \ \  \\|__| \  \  
+      \ \  \ \ \  \ \  \|\  \ \  \\  \\ \  \|____|\  \        \ \  \ \  \ \  \\\  \  /     \/   \ \  \ \  \____\ \  \ \  \\\  \ \  \    \ \  \ 
+       \ \__\ \ \__\ \_______\ \__\\ _\\ \__\____\_\  \        \ \__\ \__\ \_______\/  /\   \    \ \__\ \_______\ \__\ \_______\ \__\    \ \__\
+        \|__|  \|__|\|_______|\|__|\|__|\|__|\_________\        \|__|\|__|\|_______/__/ /\ __\    \|__|\|_______|\|__|\|_______|\|__|     \|__|
+                                            \|_________|                           |__|/ \|__|                                                 
+                                                                                                                                               
+=================================================================================================================================================
+
+Tigris Auxilium
+Development Log #4
+Status: Nightly
+6/28/2020 | 0.0.1.6 | "It looks like I'm pretending"
+======================================================
+---------
+Overview:
+---------
+Mainly working on clearing on meaningless errors and unused data. Also working on documentation to make it easier for me to read. 
+Working on trying to get the panels to talk to each other.
+
+-------------
+New Features:
+-------------
+-User Setup Panel now shows at first launch
+
+-----------
+Known Bugs:
+-----------
+-Setup Panel doesn't leave after hitting finished
+-Errors from unused vars and functions still left over
+-No default text when first launch browser tab page
+
+-------------
+Fixed Issues:
+-------------
+-UserSetup Panel now appears
+-Mis. bugs and errors
+
+------
+Plans:
+------
+-Start combining classes that can be done for simplicity and make instancing/referencing easier
+-Prompt message for the nickname of links
+-Remotely close & open tabs from a single tab
+-Make Save system more dynamic
+-Have title bar greet the user when booted
+

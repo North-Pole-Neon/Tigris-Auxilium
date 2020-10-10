@@ -37,6 +37,6 @@
          <image>
             <Image url="@../photos/NPNLogo.png" />
          </image></ImageView>
-      <TextArea editable="false" focusTraversable="false" layoutX="14.0" layoutY="15.0" prefHeight="153.0" prefWidth="188.0" text="Hello their, we just need you to fill a few things before we begain. This might not be important now but will be in the future" wrapText="true" />
+      <TextArea cacheShape="false" editable="false" focusTraversable="false" layoutX="14.0" layoutY="15.0" prefHeight="153.0" prefWidth="188.0" text="Hello their, we just need you to fill a few things before we begain. This might not be important now but will be in the future" wrapText="true" />
    </children>
 </AnchorPane>

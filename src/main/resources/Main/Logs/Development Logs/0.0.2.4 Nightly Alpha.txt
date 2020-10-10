@@ -1,0 +1,56 @@
+=================================================================================================================================================
+ _________  ___  ________  ________  ___  ________           ________  ___  ___     ___    ___ ___  ___       ___  ___  ___  _____ ______      
+|\___   ___\\  \|\   ____\|\   __  \|\  \|\   ____\         |\   __  \|\  \|\  \   |\  \  /  /|\  \|\  \     |\  \|\  \|\  \|\   _ \  _   \    
+\|___ \  \_\ \  \ \  \___|\ \  \|\  \ \  \ \  \___|_        \ \  \|\  \ \  \\\  \  \ \  \/  / | \  \ \  \    \ \  \ \  \\\  \ \  \\\__\ \  \   
+     \ \  \ \ \  \ \  \  __\ \   _  _\ \  \ \_____  \        \ \   __  \ \  \\\  \  \ \    / / \ \  \ \  \    \ \  \ \  \\\  \ \  \\|__| \  \  
+      \ \  \ \ \  \ \  \|\  \ \  \\  \\ \  \|____|\  \        \ \  \ \  \ \  \\\  \  /     \/   \ \  \ \  \____\ \  \ \  \\\  \ \  \    \ \  \ 
+       \ \__\ \ \__\ \_______\ \__\\ _\\ \__\____\_\  \        \ \__\ \__\ \_______\/  /\   \    \ \__\ \_______\ \__\ \_______\ \__\    \ \__\
+        \|__|  \|__|\|_______|\|__|\|__|\|__|\_________\        \|__|\|__|\|_______/__/ /\ __\    \|__|\|_______|\|__|\|_______|\|__|     \|__|
+                                            \|_________|                           |__|/ \|__|                                                 
+                                                                                                                                               
+=================================================================================================================================================
+
+Tigris Auxilium
+Development Log #9
+Status: Nightly
+9/07/2020 | 0.0.2.4 | "Spring Cleaning Part 1"
+======================================================
+---------
+Overview:
+---------
+Added Collections tab under the Apps button panel. Worked on opening optimization, boots much faster except for apps.
+Actually started working on making the program more flexible to write and read.
+-------------
+New Features:
+-------------
+* App Collections is a new feature to help you create groups of apps to launch at once to help start a work session
+* Project Planner now has basic color coding
+* Tables will load data in fields if the user clicks or selects it with keyboard
+
+-----------
+Known Bugs:
+-----------
+* App installation errors out
+* TA boot rechecks data each time it gets activated
+* SYS errors when certain text fields are left empty
+* Apps takes a while to load
+
+-------------
+Fixed Issues:
+-------------
+* Classes are getting easy to read
+* Cleaned console logs a bit
+* Boots much faster
+* The setup page will bring the user to the front page after setup
+* SQL tables are loaded ready for first boot 
+* Setup page will no longer crash if fields are left blank
+* Files will copy to the local folder properly
+* Many mis. bugs and errors
+
+------
+Plans:
+------
+* Spring Cleaning Part 2
+* Power controls
+* App installer
+* Maven

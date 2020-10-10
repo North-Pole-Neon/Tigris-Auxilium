@@ -1,0 +1,37 @@
+
+ _________  ___  ________  ________  ___  ________           ________  ___  ___     ___    ___ ___  ___       ___  ___  ___  _____ ______      
+|\___   ___\\  \|\   ____\|\   __  \|\  \|\   ____\         |\   __  \|\  \|\  \   |\  \  /  /|\  \|\  \     |\  \|\  \|\  \|\   _ \  _   \    
+\|___ \  \_\ \  \ \  \___|\ \  \|\  \ \  \ \  \___|_        \ \  \|\  \ \  \\\  \  \ \  \/  / | \  \ \  \    \ \  \ \  \\\  \ \  \\\__\ \  \   
+     \ \  \ \ \  \ \  \  __\ \   _  _\ \  \ \_____  \        \ \   __  \ \  \\\  \  \ \    / / \ \  \ \  \    \ \  \ \  \\\  \ \  \\|__| \  \  
+      \ \  \ \ \  \ \  \|\  \ \  \\  \\ \  \|____|\  \        \ \  \ \  \ \  \\\  \  /     \/   \ \  \ \  \____\ \  \ \  \\\  \ \  \    \ \  \ 
+       \ \__\ \ \__\ \_______\ \__\\ _\\ \__\____\_\  \        \ \__\ \__\ \_______\/  /\   \    \ \__\ \_______\ \__\ \_______\ \__\    \ \__\
+        \|__|  \|__|\|_______|\|__|\|__|\|__|\_________\        \|__|\|__|\|_______/__/ /\ __\    \|__|\|_______|\|__|\|_______|\|__|     \|__|
+                                            \|_________|                           |__|/ \|__|                                                 
+   ______                __                __           
+  / ____/_______  ____ _/ /_____  _____   / /___  ____ _
+ / /   / ___/ _ \/ __ `/ __/ __ \/ ___/  / / __ \/ __ `/
+/ /___/ /  /  __/ /_/ / /_/ /_/ / /     / / /_/ / /_/ / 
+\____/_/   \___/\__,_/\__/\____/_/     /_/\____/\__, /  
+                                               /____/   
+                                                                                                                                               
+========================================================
+7/30/2020 - Neopect {Creator Log #5}
+
+
+
+The setup progress works just fine with some minor errors 
+after completion. It can store and read data just fine 
+between user data and browser tab names. Power controls 
+are a bit tricky so I'm holding off on them for a bit until 
+I get back from break. 
+
+Now a big part of what I wanted to work on was an easy mac 
+app Installation process. I have created the ability to 
+install an app, dmg, and pkg files with ease. Just enter the 
+path and it does the work by itself. The only issue is that 
+I finished the scripts after I left home without my MacBook 
+so I will have to wait to test it to see if it works.
+
+Right now I'm going to focus on housekeeping on the back end 
+of things to make things easier to write and use as well as 
+work on a task list for the user.

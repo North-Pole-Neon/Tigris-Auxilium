@@ -1,0 +1,57 @@
+=================================================================================================================================================
+ _________  ___  ________  ________  ___  ________           ________  ___  ___     ___    ___ ___  ___       ___  ___  ___  _____ ______      
+|\___   ___\\  \|\   ____\|\   __  \|\  \|\   ____\         |\   __  \|\  \|\  \   |\  \  /  /|\  \|\  \     |\  \|\  \|\  \|\   _ \  _   \    
+\|___ \  \_\ \  \ \  \___|\ \  \|\  \ \  \ \  \___|_        \ \  \|\  \ \  \\\  \  \ \  \/  / | \  \ \  \    \ \  \ \  \\\  \ \  \\\__\ \  \   
+     \ \  \ \ \  \ \  \  __\ \   _  _\ \  \ \_____  \        \ \   __  \ \  \\\  \  \ \    / / \ \  \ \  \    \ \  \ \  \\\  \ \  \\|__| \  \  
+      \ \  \ \ \  \ \  \|\  \ \  \\  \\ \  \|____|\  \        \ \  \ \  \ \  \\\  \  /     \/   \ \  \ \  \____\ \  \ \  \\\  \ \  \    \ \  \ 
+       \ \__\ \ \__\ \_______\ \__\\ _\\ \__\____\_\  \        \ \__\ \__\ \_______\/  /\   \    \ \__\ \_______\ \__\ \_______\ \__\    \ \__\
+        \|__|  \|__|\|_______|\|__|\|__|\|__|\_________\        \|__|\|__|\|_______/__/ /\ __\    \|__|\|_______|\|__|\|_______|\|__|     \|__|
+                                            \|_________|                           |__|/ \|__|                                                 
+                                                                                                                                               
+=================================================================================================================================================
+
+Tigris Auxilium
+Development Log #6
+Status: Nightly
+8/01/2020 | 0.0.2.1 | "It's can actually remember now"
+======================================================
+---------
+Overview:
+---------
+Revisiting the project while changing a couple of things around. 
+Mainly moving to JSON, placing builds in project folders, and cleaning the code a bit.
+Fixed Jar to where they can actually be opened by the user.
+-------------
+New Features:
+-------------
+* TA will now save using JSON files instead of the default Java serialization method
+* TA will now save its files in an external folder
+* User Setup Panel will always show at first launch
+* When TA detects a new host device it will wipe its data and start fresh
+* List of Browser tabs will be properly remembered (Outdated)
+
+-----------
+Known Bugs:
+-----------
+* Setup Panel doesn't leave after hitting finished
+* No default text when first launch browser tab page
+* Program crashes if Setup page is left with blank information
+* Greeting text will return null instead of showing the name
+* Web site links must have the full www.com address
+* Browser Tab Save&Load no longer work
+
+-------------
+Fixed Issues:
+-------------
+* UserSetup Panel now appears if either the data is deleted or the app has been transferred to a new host
+* Warning free (Outdated)
+* Browser will remember the links and whenever you have them checked. (Outdated)
+* Mis. bugs and errors
+
+------
+Plans:
+------
+-Start combining classes that can be done for simplicity and make instancing/referencing easier
+-Prompt message for the nickname of links
+-Have title bar greet the user when booted
+-PC Power control

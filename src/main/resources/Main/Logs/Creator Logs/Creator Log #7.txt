@@ -1,0 +1,29 @@
+0.0.3.0 Stable Beta
+ _________  ___  ________  ________  ___  ________           ________  ___  ___     ___    ___ ___  ___       ___  ___  ___  _____ ______      
+|\___   ___\\  \|\   ____\|\   __  \|\  \|\   ____\         |\   __  \|\  \|\  \   |\  \  /  /|\  \|\  \     |\  \|\  \|\  \|\   _ \  _   \    
+\|___ \  \_\ \  \ \  \___|\ \  \|\  \ \  \ \  \___|_        \ \  \|\  \ \  \\\  \  \ \  \/  / | \  \ \  \    \ \  \ \  \\\  \ \  \\\__\ \  \   
+     \ \  \ \ \  \ \  \  __\ \   _  _\ \  \ \_____  \        \ \   __  \ \  \\\  \  \ \    / / \ \  \ \  \    \ \  \ \  \\\  \ \  \\|__| \  \  
+      \ \  \ \ \  \ \  \|\  \ \  \\  \\ \  \|____|\  \        \ \  \ \  \ \  \\\  \  /     \/   \ \  \ \  \____\ \  \ \  \\\  \ \  \    \ \  \ 
+       \ \__\ \ \__\ \_______\ \__\\ _\\ \__\____\_\  \        \ \__\ \__\ \_______\/  /\   \    \ \__\ \_______\ \__\ \_______\ \__\    \ \__\
+        \|__|  \|__|\|_______|\|__|\|__|\|__|\_________\        \|__|\|__|\|_______/__/ /\ __\    \|__|\|_______|\|__|\|_______|\|__|     \|__|
+                                            \|_________|                           |__|/ \|__|                                                 
+   ______                __                __           
+  / ____/_______  ____ _/ /_____  _____   / /___  ____ _
+ / /   / ___/ _ \/ __ `/ __/ __ \/ ___/  / / __ \/ __ `/
+/ /___/ /  /  __/ /_/ / /_/ /_/ / /     / / /_/ / /_/ / 
+\____/_/   \___/\__,_/\__/\____/_/     /_/\____/\__, /  
+                                               /____/   
+                                                                                                                                               
+========================================================
+9/22/2020 - Neopect {Creator Log #7}
+
+
+
+Hello again, we meet for another day about what's going on with me and the development of TA. TA was a project that started from exploring my mac and finding of applescripts. It was a simple language based on javascript. I made a simple little app that opened a set of tabs every morning. I would edit it by using the alert system built into it. Now I moved to Java and built a proper GUI for it. The project's features were created from tools and functions I've learned while experimenting with Java. Most of the things I learned and implemented are meant to help me in my school life by making basic tasks easier and more simplistic though, as of now, I haven't gotten to the "simple" part yet. I'm not 100% satisfied with where I'm stopping here, but at this point, it's time I move on.
+
+Starting now I will be migrating my project from Java Swing to JavaFX. As well as moving my project to a Maven built project. Moving to Maven will not change anything really to the front end of what a user would see but completely change the backend. It will as well open me to a new spectrum of plugins and features offered by creators to help add functionality to projects. Moving to JavaFX will be something that you will notice majorly. JavaFX is the most modern GUI library for Java. It hosts tons of more features than swing could ever do or easily accomplished. JFX will also make things look nicer as it is custom XML files.
+
+Moving to JavaFX and Maven will require me to rewrite the entire application. Though, I can use my default functions and some GUI operations. Hopefully, things will be simple like changing one thing. But we'll see what happens.
+
+See you later,
+Neopect

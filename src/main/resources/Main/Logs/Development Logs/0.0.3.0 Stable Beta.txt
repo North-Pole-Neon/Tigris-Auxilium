@@ -1,0 +1,68 @@
+=================================================================================================================================================
+ _________  ___  ________  ________  ___  ________           ________  ___  ___     ___    ___ ___  ___       ___  ___  ___  _____ ______      
+|\___   ___\\  \|\   ____\|\   __  \|\  \|\   ____\         |\   __  \|\  \|\  \   |\  \  /  /|\  \|\  \     |\  \|\  \|\  \|\   _ \  _   \    
+\|___ \  \_\ \  \ \  \___|\ \  \|\  \ \  \ \  \___|_        \ \  \|\  \ \  \\\  \  \ \  \/  / | \  \ \  \    \ \  \ \  \\\  \ \  \\\__\ \  \   
+     \ \  \ \ \  \ \  \  __\ \   _  _\ \  \ \_____  \        \ \   __  \ \  \\\  \  \ \    / / \ \  \ \  \    \ \  \ \  \\\  \ \  \\|__| \  \  
+      \ \  \ \ \  \ \  \|\  \ \  \\  \\ \  \|____|\  \        \ \  \ \  \ \  \\\  \  /     \/   \ \  \ \  \____\ \  \ \  \\\  \ \  \    \ \  \ 
+       \ \__\ \ \__\ \_______\ \__\\ _\\ \__\____\_\  \        \ \__\ \__\ \_______\/  /\   \    \ \__\ \_______\ \__\ \_______\ \__\    \ \__\
+        \|__|  \|__|\|_______|\|__|\|__|\|__|\_________\        \|__|\|__|\|_______/__/ /\ __\    \|__|\|_______|\|__|\|_______|\|__|     \|__|
+                                            \|_________|                           |__|/ \|__|                                                 
+                                                                                                                                               
+=================================================================================================================================================
+
+Tigris Auxilium
+Development Log #10
+Status: Stable
+9/22/2020 | 0.0.3.0 | "We're beta's!"
+======================================================
+---------
+Overview:
+---------
+Fixed some other parts of the program that were being slow,
+mainly fixed a few minor features. Starting to prep for the next move.
+-------------
+New Features:
+-------------
+* File encryption
+* TA will now save using JSON files instead of the default Java serialization method
+* TA will now save its files in an external folder
+* User Setup Panel will always show at first launch
+* When TA detects a new host device it will wipe its data and start fresh
+* List of Browser tabs will be properly remembered
+* You can install .apps / .dmg / .pkg now with ease from the apps tab (Deprecated)
+* Hide all visible applications from the tools tab
+* TA will greet you from the title bar :)
+* Project Planner is a new feature to help organize your school project tasks
+* Project Planner now has basic color coding
+* App Collections is a new feature to help you create groups of apps to launch at once to help start a work session
+* Tables will load data in fields if user clicks or selects it with keyboard
+
+-----------
+Known Bugs:
+-----------
+* App installation errors out (Deprecated)
+* TA boot rechecks data each time it gets activated
+* Apps takes a while to load
+
+-------------
+Fixed Issues:
+-------------
+* UserSetup Panel now appears if either the data is deleted or the app has been transferred to a new host
+* Warning free
+* Browser will remember the links and whenever you have them checked.
+* List of Browser tabs will be properly remembered
+* Classes are getting easy to read
+* Cleaned console logs a bit
+* Boots much faster
+* The setup page will bring user to front page after setup
+* SQL tables are loaded ready for first boot 
+* Setup page will no longer crash if fields are left blank
+* Files will copy to local folder properly
+* Fixed fileChooser from filling fields
+* Many mis. bugs and errors
+
+------
+Plans:
+------
+* Maven
+* JavaFX

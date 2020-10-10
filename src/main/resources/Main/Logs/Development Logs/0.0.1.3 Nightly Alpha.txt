@@ -1,0 +1,45 @@
+=================================================================================================================================================
+ _________  ___  ________  ________  ___  ________           ________  ___  ___     ___    ___ ___  ___       ___  ___  ___  _____ ______      
+|\___   ___\\  \|\   ____\|\   __  \|\  \|\   ____\         |\   __  \|\  \|\  \   |\  \  /  /|\  \|\  \     |\  \|\  \|\  \|\   _ \  _   \    
+\|___ \  \_\ \  \ \  \___|\ \  \|\  \ \  \ \  \___|_        \ \  \|\  \ \  \\\  \  \ \  \/  / | \  \ \  \    \ \  \ \  \\\  \ \  \\\__\ \  \   
+     \ \  \ \ \  \ \  \  __\ \   _  _\ \  \ \_____  \        \ \   __  \ \  \\\  \  \ \    / / \ \  \ \  \    \ \  \ \  \\\  \ \  \\|__| \  \  
+      \ \  \ \ \  \ \  \|\  \ \  \\  \\ \  \|____|\  \        \ \  \ \  \ \  \\\  \  /     \/   \ \  \ \  \____\ \  \ \  \\\  \ \  \    \ \  \ 
+       \ \__\ \ \__\ \_______\ \__\\ _\\ \__\____\_\  \        \ \__\ \__\ \_______\/  /\   \    \ \__\ \_______\ \__\ \_______\ \__\    \ \__\
+        \|__|  \|__|\|_______|\|__|\|__|\|__|\_________\        \|__|\|__|\|_______/__/ /\ __\    \|__|\|_______|\|__|\|_______|\|__|     \|__|
+                                            \|_________|                           |__|/ \|__|                                                 
+                                                                                                                                               
+=================================================================================================================================================
+
+Tigris Auxilium
+Development Log #3
+Status: Nightly
+6/28/2020 | 0.0.1.3 | "He's remembering, he's remembering"
+======================================================
+---------
+Overview:
+---------
+The browser tab is now working and your able to enter url's and open them in your default browser. Also you can press save which will create a save file. 
+Before I release the next feature I want to work on the UserSetup save functions.
+
+-------------
+New Features:
+-------------
+-You can open a max of 6 browser tabs on your web browser
+-You can save your list of browser tabs and if you enabled them in a save file
+
+-----------
+Known Bugs:
+-----------
+-The "Get to know you" panel doesn't load for first time opening
+
+-------------
+Fixed Issues:
+-------------
+-Save your browser tabs between launches
+
+------
+Plans:
+------
+-Greeting panel at boot
+-A better method to assign UserInfo data
+
