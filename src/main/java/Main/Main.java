@@ -1,4 +1,4 @@
-package main;
+package Main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -19,14 +19,14 @@ public class Main extends Application {
 
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("fxml/main.fxml"));
+            root = FXMLLoader.load(getClass().getResource("fxml/Home.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
 
         Scene scene = new Scene(root);
-        primaryStage.setTitle("Hello");
+        primaryStage.setTitle("Tigris Auxilium");
         primaryStage.setScene(scene);
         primaryStage.show();
 
