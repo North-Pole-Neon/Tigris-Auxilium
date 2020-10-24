@@ -2,6 +2,7 @@ package Main.Controllers;
 
 
 import Main.Features.RWJsonUser;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -26,11 +27,9 @@ public class SetupCon {
     public TextField txtBoxISD;
 
     public void initialize() {
-        ObservableList<String> list = comboGrade.getItems();
-        list.add("9");
-        list.add("10");
-        list.add("11");
-        list.add("12");
+        ObservableList<String> list = FXCollections.observableArrayList("9", "10", "11", "12");
+        comboGrade.setValue("Open");
+        comboGrade.setItems(list);
 
     }
 
@@ -65,11 +64,13 @@ public class SetupCon {
 
     public void buildSaveSys() {
 
-        copyFiles("ProjectPlanner.sqlite");
-        copyFiles("Collections.sqlite");
+        copyFiles("ProjectPlanner.sqlite", "db");
+        copyFiles("Collections.sqlite", "db");
+        copyFiles("Tabs.sqlite", "db");
+        copyFiles("sleep.sh", "shellCom");
     }
 
-    public void copyFiles(String fileName) {
+    public void copyFiles(String fileName, String type) {
 
         //Path source = null;
 
@@ -100,10 +101,11 @@ public class SetupCon {
 			e.printStackTrace();
 		}*/
 
-        try (InputStream stream = getClass().getResourceAsStream("/src/resources/" + fileName)) { //Fsdfsd
+        try (InputStream stream = getClass().getResourceAsStream("/Main/"+type+"/" + fileName)) { //Fsdfsd
             Files.copy(stream, destination);
+            System.out.println("Copy complete");
         } catch (IOException e) {
-
+            System.out.println("Copy failed");
             e.printStackTrace();
         }
 

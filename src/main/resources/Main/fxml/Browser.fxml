@@ -26,7 +26,7 @@
                             <children>
                                 <ListView fx:id="tabLv" layoutX="40.0" layoutY="121.0" onMouseClicked="#onColLvClick" prefHeight="355.0" prefWidth="200.0" />
                                 <ChoiceBox fx:id="tabCbLv" layoutX="40.0" layoutY="85.0" prefHeight="25.0" prefWidth="127.0" />
-                                <Button layoutX="188.0" layoutY="85.0" mnemonicParsing="false" onAction="#onTabListbtn" text="Button" />
+                                <Button fx:id="tabBtnLv" layoutX="188.0" layoutY="85.0" mnemonicParsing="false" onAction="#onTabListbtn" text="Button" />
                                 <TextField fx:id="tabTfLv" layoutX="40.0" layoutY="43.0" prefHeight="25.0" prefWidth="200.0" />
                                 <TitledPane animated="false" collapsible="false" layoutX="353.0" layoutY="143.0" prefHeight="70.0" prefWidth="200.0" text="Name">
                                     <content>

@@ -13,16 +13,18 @@
 Tigris Auxilium
 Development Log #11
 Status: SNAPSHOT
-10/10/2020 | 0.0.3.5 | "Converting over"
+10/19/2020 | 0.0.3.5 | "Converting over"
 ======================================================
+
 ---------
 Overview:
 ---------
-
+Started moving over to JavaFX with Gradle. Got most of the features back but need to work on a few things.
 -------------
 New Features:
 -------------
-* NA
+* Rewritten in JavaFX
+* Builds in Gradle
 
 -----------
 Known Bugs:
@@ -37,4 +39,7 @@ Fixed Issues:
 ------
 Plans:
 ------
-* NA
+* Finish Setup process
+* Adjust main init sequence
+* Auto Updater
+* Power commands

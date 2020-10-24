@@ -47,7 +47,6 @@ public class AppsCon {
         colCbLv.setValue("Open");
         colCbLv.setItems(lvOptions);
 
-        System.out.println("Test");
         //showProject();
         colFRefLv();
 
