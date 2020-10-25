@@ -5,10 +5,12 @@ import Main.Features.tableCons.PPlanner;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.util.Callback;
 
 import java.sql.*;
 
@@ -211,7 +213,9 @@ public class HomeworkCon {
         String ser = "'%" + tfpSearch.getText() + "%'";
         String selection = (String)cbSearch.getSelectionModel().getSelectedItem();
 
-        /*if(tfpSearch.getText() != "") {
+
+        if(tfpSearch.getText() != "") {
+            ObservableList<PPlanner> plannerList = FXCollections.observableArrayList();
             String query = "select * from project WHERE " + selection + " LIKE " + ser;
             System.out.println(query);
             //executeQuery(query);
@@ -226,17 +230,60 @@ public class HomeworkCon {
                 PPlanner pplanner;
                 while(rs.next()) {
                     pplanner = new PPlanner(rs.getInt("id"), rs.getString("name"), rs.getString("description"), rs.getInt("status"), rs.getInt("priority"), rs.getString("dueDate"), rs.getInt("cat"));
-                    //plannerList.add(pplanner);
+                    plannerList.add(pplanner);
                 }
+
+                colName.setCellValueFactory(new PropertyValueFactory<PPlanner, String>("name"));
+                colDes.setCellValueFactory(new PropertyValueFactory<PPlanner, String>("description"));
+                colStatus.setCellValueFactory(new PropertyValueFactory<PPlanner, Integer>("status"));
+                colPri.setCellValueFactory(new PropertyValueFactory<PPlanner, Integer>("priority"));
+                colDue.setCellValueFactory(new PropertyValueFactory<PPlanner, String>("dueDate"));
+                colCat.setCellValueFactory(new PropertyValueFactory<PPlanner, Integer>("cat"));
+
+                tbPPlanner.setItems(plannerList);
+
 
             }catch(Exception e) {
                 e.printStackTrace();
             }
 
-        }*/
+        } else {
+            showProject();
+        }
 
 
     }
+
+
+    private void styleRowColor() {
+        /*
+        int i = 0;
+        for (Node n: tbPPlanner.lookupAll("TableRow")) {
+            if (n instanceof TableRow) {
+                TableRow row = (TableRow) n;
+                if (tbPPlanner.getItems().get(i).getWillPay()) {
+                    row.getStyleClass().add("willPayRow");
+                    row.setDisable(false);
+                } else {
+                    row.getStyleClass().add("wontPayRow");
+                    row.setDisable(true);
+                }
+                i++;
+                if (i == tbPPlanner.getItems().size())
+                    break;
+            }
+        }
+
+         */
+
+    }
+
+    /*
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    -------------------------------------------------------------------------------Project Planner-----------------------------------------------------------------------
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     */
+
 }
 
 /*

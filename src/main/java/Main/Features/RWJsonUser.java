@@ -191,7 +191,7 @@ public class RWJsonUser {
         System.out.println(name +" JSON file path is: " +UserFilePath); //PRINT finalPath
     }
 
-    public static void userFileExists(String path, Object fileExists) {// --------------------USER FILE EXISTS-------------------------
+    public static void userFileExists(String path) {// --------------------USER FILE EXISTS-------------------------
 
         boolean temp = new File(path).isFile();
         System.out.println("User file exists: " + temp); //PRINT User file exists

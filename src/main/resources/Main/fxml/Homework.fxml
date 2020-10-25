@@ -59,7 +59,7 @@
                               <Button fx:id="btnInsert" mnemonicParsing="false" onAction="#insertAction" text="Insert" />
                               <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#updateAction" text="Update" />
                               <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#deleteAction" text="Delete" />
-                              <HBox alignment="CENTER" prefHeight="40.0" prefWidth="221.0" visible="false">
+                              <HBox alignment="CENTER" prefHeight="40.0" prefWidth="221.0">
                                  <children>
                                     <ChoiceBox fx:id="cbSearch" prefHeight="25.0" prefWidth="111.0" />
                                     <TextField fx:id="tfpSearch" onKeyReleased="#ppSearchKeyReleased" promptText="Search" />

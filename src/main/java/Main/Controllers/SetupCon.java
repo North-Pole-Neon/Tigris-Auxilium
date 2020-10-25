@@ -50,7 +50,7 @@ public class SetupCon {
         RWJsonUser.ReadToJson();
 
         try {
-            Parent home_page_parent = FXMLLoader.load(getClass().getResource("/fxml/Home.fxml"));
+            Parent home_page_parent = FXMLLoader.load(getClass().getResource("/Main/fxml/Home.fxml"));
             Scene home_page_scene = new Scene(home_page_parent);
             Stage app_stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             app_stage.setScene(home_page_scene);
@@ -74,8 +74,8 @@ public class SetupCon {
 
         //Path source = null;
 
-
-        Object OS = RWJsonUser.osName;
+        RWJsonUser.getOSVersion();
+        String OS = RWJsonUser.osName;
         String fullPath;
         if (OS.equals("Windows 10") || OS.equals("Windows 8") || OS.equals("Windows 7")) {
             fullPath = "C:\\Test\\TA\\Data\\"+fileName;
