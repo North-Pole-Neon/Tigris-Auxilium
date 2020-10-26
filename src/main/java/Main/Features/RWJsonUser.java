@@ -26,6 +26,7 @@ public class RWJsonUser {
     public static Boolean fileUserExists;
     public static Boolean folderUserExists;
     public static String finalPath;
+    public static Boolean isWin;
     public static String UserFilePath;
 
 
@@ -162,8 +163,9 @@ public class RWJsonUser {
         String homePath;
         if (osName.equals("Windows 10") || osName.equals("Windows 8") || osName.equals("Windows 7")) {
             homePath = "C:\\Test\\TA\\Data";
+            isWin = true;
         } else {
-
+            isWin = false;
             homePath = System.getProperty("user.home") + "/TA/Data/";
         }
 
@@ -174,7 +176,7 @@ public class RWJsonUser {
     }
 
     public static void jsonPathMaker(String name) { //----------------------------JSON PATH MAKER---------------------------------
-        String tempPath = null;
+        String tempPath = "";
         if (osName.equals("Windows 10") || osName.equals("Windows 8") || osName.equals("Windows 7")) {
             tempPath = finalPath + "\\";
         } else {

@@ -1,6 +1,7 @@
 package Main.Controllers;
 
 import Main.Features.OSDetector;
+import Main.Features.SQLConnection;
 import Main.Features.tableCons.AppCol;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -37,6 +38,8 @@ public class AppsCon {
     public TableView<AppCol> colTb;
     public TableColumn<AppCol, String> colColName;
     public TableColumn<AppCol, String> colColPath;
+
+    SQLConnection Con = new SQLConnection();
 
 
     public void initialize() {
@@ -120,7 +123,8 @@ public class AppsCon {
     public void colFRefLv(){ //--------------------------------------------------
         ObservableList<String> names = FXCollections.observableArrayList();
 
-        Connection conn = getConnection();
+        //Connection conn = getConnection();
+        Connection conn = Con.sqliteCon("Collections");
         String query = "select name FROM sqlite_master WHERE type ='table' AND name NOT LIKE 'sqlite_%'";
         Statement st = null; //Use prepare statement for repetitive scripts
         ResultSet rs = null;
@@ -148,7 +152,8 @@ public class AppsCon {
 
     public ObservableList<AppCol> getAppList(){ //--------------------------------------------------
         ObservableList<AppCol> appList = FXCollections.observableArrayList();
-        Connection conn = getConnection();
+        //Connection conn = getConnection();
+        Connection conn = Con.sqliteCon("Collections");
         String query = "select * from " + colLv.getSelectionModel().getSelectedItem() + "";
         Statement st = null; //Use prepare statement for repetitive scripts
         ResultSet rs = null;
@@ -204,7 +209,8 @@ public class AppsCon {
     }
 
     private void executeQuery(String query) {
-        Connection conn = getConnection();
+        //Connection conn = getConnection();
+        Connection conn = Con.sqliteCon("Collections");
         Statement st = null;
         try {
             st = conn.createStatement();
@@ -229,7 +235,8 @@ public class AppsCon {
             case "Open":
 
                 try {
-                    Connection conn = getConnection();
+                    //Connection conn = getConnection();
+                    Connection conn = Con.sqliteCon("Collections");
                     query = "select Path from "+colLv.getSelectionModel().getSelectedItem().toString();
                     System.out.println(query);
                     PreparedStatement pst =  conn.prepareStatement(query);

@@ -49,6 +49,8 @@ public class SetupCon {
         RWJsonUser.WriteToJson();
         RWJsonUser.ReadToJson();
 
+        buildSaveSys();
+
         try {
             Parent home_page_parent = FXMLLoader.load(getClass().getResource("/Main/fxml/Home.fxml"));
             Scene home_page_scene = new Scene(home_page_parent);
@@ -64,16 +66,20 @@ public class SetupCon {
 
     public void buildSaveSys() {
 
+        copyFiles("test.txt", "db");
+        //copyFiles("testersd.txt", "db");
         copyFiles("ProjectPlanner.sqlite", "db");
         copyFiles("Collections.sqlite", "db");
         copyFiles("Tabs.sqlite", "db");
         copyFiles("sleep.sh", "shellCom");
+        copyFiles("test.txt", "db");
+        //copyFiles("testersd.txt", "db");
     }
 
     public void copyFiles(String fileName, String type) {
 
         //Path source = null;
-
+        System.out.println("Hello 1");
         RWJsonUser.getOSVersion();
         String OS = RWJsonUser.osName;
         String fullPath;
@@ -89,6 +95,7 @@ public class SetupCon {
             //System.out.println(full);
         }
 
+        System.out.println("Hello 2");
 
         Path destination = Paths.get(fullPath); //"C:\\Test\\TA\\Data\\" + fileName
 

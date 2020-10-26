@@ -1,6 +1,8 @@
 package Main.Controllers;
 
 import Main.Features.OSDetector;
+import Main.Features.RWJsonUser;
+import Main.Features.SQLConnection;
 import Main.Features.tableCons.AppCol;
 import Main.Features.tableCons.Tabs;
 import javafx.collections.FXCollections;
@@ -31,13 +33,14 @@ public class BrowserCon {
     public TableColumn<Tabs, String> tabColName;
     public TableColumn<Tabs, String> tabColURL;
 
-
+    SQLConnection Con = new SQLConnection();
 
     public void initialize() {
 
         ObservableList<String> lvOptions = FXCollections.observableArrayList("Open", "Update", "Create", "Delete");
         tabCbLv.setValue("Open");
         tabCbLv.setItems(lvOptions);
+
 
 
         //showProject();
@@ -88,7 +91,50 @@ public class BrowserCon {
         Connection conn;
         try{
             //conn = DriverManager.getConnection("jdbc:mysql://www.neopect.heliohost.org:3306/neopect_test", "neopect_neo", "TyPass01");
-            conn = DriverManager.getConnection("jdbc:sqlite:C:/Test/TA/Data/Tabs.sqlite");
+            String sqlpath = null;
+            /*
+            RWJsonUser.getOSVersion();
+            RWJsonUser.jsonPathMaker("User");
+            RWJsonUser.ReadToJson();
+
+
+            if(RWJsonUser.setupCom == "true") {
+                System.out.println("Is true");
+                if (RWJsonUser.isWin == true) {
+                    sqlpath = "C:/Test/TA/Data/Tabs.sqlite";
+                    System.out.println("Is win");
+                } else {
+                    sqlpath = RWJsonUser.finalPath + "Tabs.sqlite";
+                }
+            } else {
+                System.out.println("not true");
+            }
+            */
+            //-------------
+
+            RWJsonUser.getOSVersion();
+            RWJsonUser.rootPathMaker();
+            String OS = RWJsonUser.osName;
+            String fullPath;
+            String nextWin;
+            if (OS.equals("Windows 10") || OS.equals("Windows 8") || OS.equals("Windows 7")) {
+                fullPath = "C:\\Test\\TA\\Data\\";
+            } else {
+                fullPath = System.getProperty("user.home") + "/TA/Data/";
+            }
+            String userfile = fullPath + "User.json";
+            RWJsonUser.userFileExists(userfile);
+
+            if(RWJsonUser.fileUserExists) {
+                nextWin = "Home";
+                System.out.println("Tsetsessdfsdf");
+                sqlpath = fullPath + "Tabs.sqlite";
+            } else {
+                nextWin = "Setup";
+            }
+
+
+            conn = DriverManager.getConnection("jdbc:sqlite:" + sqlpath);
             return conn;
         }catch(Exception e) {
             System.out.println("Error: " + e.getMessage());
@@ -98,8 +144,9 @@ public class BrowserCon {
 
     public void tabFRefLv(){ //--------------------------------------------------
         ObservableList<String> names = FXCollections.observableArrayList();
+        Connection conn = Con.sqliteCon("Tabs");
+        //Connection conn = getConnection();
 
-        Connection conn = getConnection();
         String query = "select name FROM sqlite_master WHERE type ='table' AND name NOT LIKE 'sqlite_%'";
         Statement st = null; //Use prepare statement for repetitive scripts
         ResultSet rs = null;
@@ -126,7 +173,9 @@ public class BrowserCon {
 
     public ObservableList<Tabs> getTabList(){ //--------------------------------------------------
         ObservableList<Tabs> tabList = FXCollections.observableArrayList();
-        Connection conn = getConnection();
+        //Connection conn = getConnection();
+        Connection conn = Con.sqliteCon("Tabs");
+
         String query = "select * from " + tabLv.getSelectionModel().getSelectedItem() + "";
         Statement st = null; //Use prepare statement for repetitive scripts
         ResultSet rs = null;
@@ -182,7 +231,10 @@ public class BrowserCon {
     }
 
     private void executeQuery(String query) {
-        Connection conn = getConnection();
+        //Connection conn = getConnection();
+
+        Connection conn = Con.sqliteCon("Tabs");
+
         Statement st = null;
         try {
             st = conn.createStatement();
@@ -207,7 +259,8 @@ public class BrowserCon {
             case "Open":
 
                 try {
-                    Connection conn = getConnection();
+                    //Connection conn = getConnection();
+                    Connection conn = Con.sqliteCon("Tabs");
                     query = "select url from "+tabLv.getSelectionModel().getSelectedItem().toString();
                     System.out.println(query);
                     PreparedStatement pst =  conn.prepareStatement(query);

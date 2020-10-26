@@ -1,6 +1,7 @@
 package Main.Controllers;
 
 
+import Main.Features.SQLConnection;
 import Main.Features.tableCons.PPlanner;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -35,6 +36,7 @@ public class HomeworkCon {
     public TextField tfpSearch;
 
     //Connection connection = null;
+    SQLConnection Con = new SQLConnection();
 
     public void initialize() {
         //SqliteConnection sqlConn = new SqliteConnection();
@@ -42,8 +44,10 @@ public class HomeworkCon {
 
         showProject();
 
-        String st[] = {"Name", "Description", "Status", "priority", "Due Date", "Cat" }; //Add any later
-        cbSearch.getItems().addAll(st);
+        ObservableList<String> lvOptions = FXCollections.observableArrayList("Name", "Description", "Status", "priority", "Due Date", "Cat");
+        //cbSearch.setValue("Name");
+        cbSearch.setItems(lvOptions);
+        cbSearch.getSelectionModel().selectFirst();
 
     }
 
@@ -84,8 +88,9 @@ public class HomeworkCon {
 
     public ObservableList<PPlanner> getProjectList(){ //--------------------------------------------------
         ObservableList<PPlanner> plannerList = FXCollections.observableArrayList();
-        Connection conn = getConnection();
-        String query = "select * from project";
+        //Connection conn = getConnection();
+        Connection conn = Con.sqliteCon("ProjectPlanner");
+        String query = "select * from projectInfo";
         Statement st = null; //Use prepare statement for repetitive scripts
         ResultSet rs = null;
         try{
@@ -143,25 +148,26 @@ public class HomeworkCon {
     }
     //left here, finish checking statements and fixing syntax//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     private void insertRecord() {
-        String query = "INSERT INTO project (name,description,status,priority,dueDate,Cat) VALUES ('"+ tfName.getText() + "','" + tfDes.getText() + "'," + tfStatus.getText() + "," + tfPri.getText() + ",'" + tfDueDate.getText() + "',"+ tfCat.getText() + ")";
+        String query = "INSERT INTO projectInfo (name,description,status,priority,dueDate,Cat) VALUES ('"+ tfName.getText() + "','" + tfDes.getText() + "'," + tfStatus.getText() + "," + tfPri.getText() + ",'" + tfDueDate.getText() + "',"+ tfCat.getText() + ")";
         executeQuery(query);
         showProject();
     }
 
     private void updateRecord() {
-        String query = "UPDATE project SET name = '" + tfName.getText() + "', description = '" + tfDes.getText() + "', status = " + tfStatus.getText() + ", priority = " + tfPri.getText() + ", dueDate = '" + tfDueDate.getText() + "', cat = " + tfCat.getText() + " WHERE name = '" + tfName.getText() + "'";
+        String query = "UPDATE projectInfo SET name = '" + tfName.getText() + "', description = '" + tfDes.getText() + "', status = " + tfStatus.getText() + ", priority = " + tfPri.getText() + ", dueDate = '" + tfDueDate.getText() + "', cat = " + tfCat.getText() + " WHERE name = '" + tfName.getText() + "'";
         executeQuery(query);
         showProject();
     }
 
     private void deleteRecord() {
-        String query = "DELETE FROM project WHERE name = '" + tfName.getText() + "'";
+        String query = "DELETE FROM projectInfo WHERE name = '" + tfName.getText() + "'";
         executeQuery(query);
         showProject();
     }
 
     private void executeQuery(String query) {
-        Connection conn = getConnection();
+        //Connection conn = getConnection();
+        Connection conn = Con.sqliteCon("ProjectPlanner");
         Statement st = null;
         try {
             st = conn.createStatement();
@@ -216,11 +222,12 @@ public class HomeworkCon {
 
         if(tfpSearch.getText() != "") {
             ObservableList<PPlanner> plannerList = FXCollections.observableArrayList();
-            String query = "select * from project WHERE " + selection + " LIKE " + ser;
+            String query = "select * from projectInfo WHERE " + selection + " LIKE " + ser;
             System.out.println(query);
             //executeQuery(query);
             //showProject();
-            Connection conn = getConnection();
+            //Connection conn = getConnection();
+            Connection conn = Con.sqliteCon("ProjectPlanner");
 
             Statement st = null; //Use prepare statement for repetitive scripts
             ResultSet rs = null;
