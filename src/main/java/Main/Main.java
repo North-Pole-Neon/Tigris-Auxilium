@@ -17,7 +17,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        //Shorten this soon
+        //Shorten this soon in another function
         RWJsonUser.getOSVersion();
         String OS = RWJsonUser.osName;
         String fullPath;
