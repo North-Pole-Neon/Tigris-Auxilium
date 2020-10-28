@@ -44,7 +44,7 @@
                           </content>
                         </TitledPane>
                         <TextArea editable="false" focusTraversable="false" layoutX="14.0" layoutY="30.0" prefHeight="175.0" prefWidth="200.0" text="Global Chat&#10;---------------------------" />
-                        <TitledPane disable="true" layoutX="14.0" layoutY="222.0" prefHeight="282.0" prefWidth="230.0" text="Admin console" visible="false">
+                        <TitledPane disable="true" layoutX="14.0" layoutY="222.0" prefHeight="282.0" prefWidth="230.0" text="Admin console">
                            <content>
                               <VBox prefHeight="200.0" prefWidth="210.0">
                                  <children>

@@ -60,7 +60,7 @@ public class SQLConnection {
 
             if(RWJsonUser.fileUserExists) {
                 nextWin = "Home";
-                System.out.println("Tsetsessdfsdf");
+                //System.out.println("Tsetsessdfsdf");
                 sqlpath = fullPath + name + ".sqlite";
             } else {
                 nextWin = "Setup";

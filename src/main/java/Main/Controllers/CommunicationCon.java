@@ -21,11 +21,11 @@ import java.util.Collections;
 import java.util.List;
 
 public class CommunicationCon {
-    public TableView chatTable;
-    public TableColumn chatTableUsernameCol;
-    public TableColumn chatTableMessageCol;
-    public TableColumn chatTableTimeCol;
-    public TableColumn chatTableIDCol;
+    public TableView<ChatCL> chatTable;
+    public TableColumn<ChatCL, String> chatTableUsernameCol;
+    public TableColumn<ChatCL, String> chatTableMessageCol;
+    public TableColumn<ChatCL, Integer> chatTableTimeCol;
+    public TableColumn<ChatCL, Integer> chatTableIDCol;
 
     public TextField chatSendTf;
 
@@ -60,6 +60,7 @@ public class CommunicationCon {
     }
 
     public void onActionChatRefreshBtn(ActionEvent actionEvent) {
+        getUserList();
         showMessages();
     }
 
@@ -85,18 +86,67 @@ public class CommunicationCon {
         Statement st = null; //Use prepare statement for repetitive scripts
         ResultSet rs = null;
 
-
-
+        List<Integer> rsUserid = new ArrayList<Integer>();
+        List<String> rsMessage = new ArrayList<String>();
+        List<Integer> rsTime = new ArrayList<Integer>();
+        List<Integer> rsID = new ArrayList<Integer>();
 
         try{
             st = conn.createStatement();
             rs = st.executeQuery(query);
             ChatCL chatCL;
-            while(rs.next()) {
-                chatCL = new ChatCL(rs.getString("user"), rs.getInt("userID"), rs.getString("message"), rs.getInt("Time"), rs.getInt("ID"));
-                ChatList.add(chatCL);
+            //int dataindex= 0;
+            while(rs.next()) {//This will pack id list then
+                //chatCL = new ChatCL(rs.getString("user"), rs.getInt("userID"), rs.getString("message"), rs.getInt("Time"), rs.getInt("ID"));
+                //ChatList.add(chatCL);
+
+
                 listMid.add(String.valueOf(rs.getInt("userID")));
+                System.out.println("Added value " + rs.getInt("userID") + " to array");
+                //dataindex++;
+
+                rsUserid.add(rs.getInt("userid"));
+                rsMessage.add(rs.getString("message"));
+                rsTime.add(rs.getInt("Time"));
+                rsID.add(rs.getInt("ID"));
+
+
+
             }
+            /*
+            Then convert it
+             */
+
+            for(int x = 0; x< listid.size(); x++) {
+                //Collections.replaceAll(list3, (list2.get(x)).toString(), (list.get(x)).toString());
+                try {
+                    Collections.replaceAll(listMid, (listid.get(x)).toString(), (listName.get(x)).toString()+"#"+(listid.get(x)).toString());
+                    System.out.println(listMid.get(x));
+                    //nameList.add(chatclu);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
+
+            }
+            System.out.println("New name list: " + listMid);
+
+
+            /*
+            The save everything
+             */
+
+
+
+            for(int x = 0; x< listMid.size(); x++) {
+                chatCL = new ChatCL(listMid.get(x), rsUserid.get(x), rsMessage.get(x), rsTime.get(x), rsID.get(x));
+                ChatList.add(chatCL);
+            }
+
+            /*
+            Spacer
+             */
+
 
         }catch(Exception e) {
             e.printStackTrace();
@@ -179,7 +229,7 @@ public class CommunicationCon {
     }
 
 
-    void loadNames() {
+    void loadNames() { //DEP
         ObservableList<ChatCLUser> nameList = FXCollections.observableArrayList();
         System.out.println("Old list: "+listMid);
         ChatCLUser chatclu;
@@ -200,7 +250,7 @@ public class CommunicationCon {
     }
 
 
-    void listTest() {
+    void listTest() { //TESTING PUR
         List<String> list = new ArrayList<String>();
         list.add("Java");
         list.add("Java Script");
@@ -244,7 +294,7 @@ public class CommunicationCon {
         System.out.println("modifed list" + list3);
     }
 
-    void replaceNames() {
+    void replaceNames() { //TESTING PUR
         List<String> list = new ArrayList<String>();
         list.add("Java");
         list.add("Java Script");
@@ -298,4 +348,42 @@ List<Integer> list = new ArrayList<Integer>();
         list.add(i);
         System.out.println(i);
         System.out.println(list);
+ */
+
+/*
+public ObservableList<ChatCL> getChatList(){ //--------------------------------------------------
+        ObservableList<ChatCL> ChatList = FXCollections.observableArrayList();
+        //Connection conn = getConnection();
+        Connection conn = Con.sqliteCon("test");
+        String query = "select * from Messages";
+        Statement st = null; //Use prepare statement for repetitive scripts
+        ResultSet rs = null;
+
+
+
+
+        try{
+            st = conn.createStatement();
+            rs = st.executeQuery(query);
+            ChatCL chatCL;
+            while(rs.next()) {
+                chatCL = new ChatCL(rs.getString("user"), rs.getInt("userID"), rs.getString("message"), rs.getInt("Time"), rs.getInt("ID"));
+                ChatList.add(chatCL);
+                listMid.add(String.valueOf(rs.getInt("userID")));
+            }
+
+        }catch(Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                rs.close();
+                st.close();
+                conn.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+
+        }
+        return ChatList;
+    }
  */
