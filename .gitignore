@@ -23,6 +23,6 @@ gradle-app.setting
 .project
 org.eclipse.buildship.core.prefs
 
-# OS ori
+# OS generics
 .dstore
 desktop.ini

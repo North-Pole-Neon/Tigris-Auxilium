@@ -73,6 +73,7 @@ public class SetupCon {
         copyFiles("Tabs.sqlite", "db");
         copyFiles("sleep.sh", "shellCom");
         copyFiles("test.txt", "db");
+        copyFiles("test.sqlite", "db");
         //copyFiles("testersd.txt", "db");
     }
 

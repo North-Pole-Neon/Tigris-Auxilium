@@ -108,7 +108,7 @@ public class AppsCon {
 
     }
 
-    public Connection getConnection() {
+    /*public Connection getConnection() {
         Connection conn;
         try{
             //conn = DriverManager.getConnection("jdbc:mysql://www.neopect.heliohost.org:3306/neopect_test", "neopect_neo", "TyPass01");
@@ -118,7 +118,7 @@ public class AppsCon {
             System.out.println("Error: " + e.getMessage());
             return null;
         }
-    }
+    }*/
 
     public void colFRefLv(){ //--------------------------------------------------
         ObservableList<String> names = FXCollections.observableArrayList();

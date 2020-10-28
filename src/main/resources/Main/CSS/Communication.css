@@ -1,0 +1,8 @@
+.tableview {
+    #-fx-background-color: grey;
+}
+
+.button {
+    #-fx-background-color: grey;
+    #-fx-text-fill: black;
+}

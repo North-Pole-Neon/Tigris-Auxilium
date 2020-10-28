@@ -87,12 +87,12 @@ public class BrowserCon {
         tabTfUrl.setText(tab.getUrl());
     }
 
-    public Connection getConnection() {
+    /*public Connection getConnection() {
         Connection conn;
         try{
             //conn = DriverManager.getConnection("jdbc:mysql://www.neopect.heliohost.org:3306/neopect_test", "neopect_neo", "TyPass01");
             String sqlpath = null;
-            /*
+
             RWJsonUser.getOSVersion();
             RWJsonUser.jsonPathMaker("User");
             RWJsonUser.ReadToJson();
@@ -109,7 +109,7 @@ public class BrowserCon {
             } else {
                 System.out.println("not true");
             }
-            */
+
             //-------------
 
             RWJsonUser.getOSVersion();
@@ -140,7 +140,7 @@ public class BrowserCon {
             System.out.println("Error: " + e.getMessage());
             return null;
         }
-    }
+    }*/
 
     public void tabFRefLv(){ //--------------------------------------------------
         ObservableList<String> names = FXCollections.observableArrayList();
