@@ -8,6 +8,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class MacTerm {
+
+    RWJsonUser rwjsu = new RWJsonUser();
+
     static String tSleep = "pmset sleepnow";
     public static String sSleep= "tell application \"System Events\"\n" +
             "\tsleep\n" +
@@ -18,7 +21,8 @@ public class MacTerm {
 
 
     public String fileFinder(String fileName) {
-        Object OS = RWJsonUser.osName;
+        rwjsu.getOSVersion();
+        Object OS = rwjsu.osName;
         String fullPath;
         if (OS.equals("Windows 10") || OS.equals("Windows 8") || OS.equals("Windows 7")) {
             fullPath = "C:\\Test\\TA\\Data\\"+fileName;

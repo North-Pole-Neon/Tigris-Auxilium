@@ -5,11 +5,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import javax.swing.JOptionPane; //Might need to be *
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 public class SQLConnection {
 
     Connection conn = null;
+    RWJsonUser rwjsu = new RWJsonUser();
 
     public Connection dbConnector(String fName) {
 
@@ -45,9 +47,9 @@ public class SQLConnection {
             //conn = DriverManager.getConnection("jdbc:mysql://www.neopect.heliohost.org:3306/neopect_test", "neopect_neo", "TyPass01");
             String sqlpath = null;
 
-            RWJsonUser.getOSVersion();
-            RWJsonUser.rootPathMaker();
-            String OS = RWJsonUser.osName;
+            rwjsu.getOSVersion();
+            rwjsu.rootPathMaker();
+            String OS = rwjsu.osName;
             String fullPath;
             String nextWin;
             if (OS.equals("Windows 10") || OS.equals("Windows 8") || OS.equals("Windows 7")) {
@@ -56,9 +58,9 @@ public class SQLConnection {
                 fullPath = System.getProperty("user.home") + "/TA/Data/";
             }
             String userfile = fullPath + "User.json";
-            RWJsonUser.userFileExists(userfile);
+            rwjsu.userFileExists(userfile);
 
-            if(RWJsonUser.fileUserExists) {
+            if(rwjsu.fileUserExists) {
                 nextWin = "Home";
                 //System.out.println("Tsetsessdfsdf");
                 sqlpath = fullPath + name + ".sqlite";
@@ -84,9 +86,9 @@ public class SQLConnection {
             //conn = DriverManager.getConnection("jdbc:mysql://www.neopect.heliohost.org:3306/neopect_test", "neopect_neo", "TyPass01");
             String sqlpath = null;
 
-            RWJsonUser.getOSVersion();
-            RWJsonUser.rootPathMaker();
-            String OS = RWJsonUser.osName;
+            rwjsu.getOSVersion();
+            rwjsu.rootPathMaker();
+            String OS = rwjsu.osName;
             String fullPath;
             String nextWin;
             if (OS.equals("Windows 10") || OS.equals("Windows 8") || OS.equals("Windows 7")) {
@@ -95,9 +97,9 @@ public class SQLConnection {
                 fullPath = System.getProperty("user.home") + "/TA/Data/";
             }
             String userfile = fullPath + "User.json";
-            RWJsonUser.userFileExists(userfile);
+            rwjsu.userFileExists(userfile);
 
-            if(RWJsonUser.fileUserExists) {
+            if(rwjsu.fileUserExists) {
                 nextWin = "Home";
                 System.out.println("Tsetsessdfsdf");
                 sqlpath = fullPath + name + ".sqlite";

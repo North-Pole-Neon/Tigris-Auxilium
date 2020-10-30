@@ -11,6 +11,8 @@ import java.io.IOException;
 
 public class Main extends Application {
 
+    RWJsonUser rwjsu = new RWJsonUser();
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -18,8 +20,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         //Shorten this soon in another function
-        RWJsonUser.getOSVersion();
-        String OS = RWJsonUser.osName;
+        rwjsu.getOSVersion();
+        String OS = rwjsu.osName;
         String fullPath;
         String nextWin;
         if (OS.equals("Windows 10") || OS.equals("Windows 8") || OS.equals("Windows 7")) {
@@ -28,9 +30,9 @@ public class Main extends Application {
             fullPath = System.getProperty("user.home") + "/TA/Data/";
         }
         String userfile = fullPath + "User.json";
-        RWJsonUser.userFileExists(userfile);
+        rwjsu.userFileExists(userfile);
 
-        if(RWJsonUser.fileUserExists) {
+        if(rwjsu.fileUserExists) {
             nextWin = "Home";
         } else {
             nextWin = "Setup";

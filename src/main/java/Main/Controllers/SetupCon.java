@@ -26,6 +26,8 @@ public class SetupCon {
     public ChoiceBox<String> comboGrade;
     public TextField txtBoxISD;
 
+    RWJsonUser rwjsu = new RWJsonUser();
+
     public void initialize() {
         ObservableList<String> list = FXCollections.observableArrayList("9", "10", "11", "12");
         comboGrade.setValue("Open");
@@ -36,18 +38,18 @@ public class SetupCon {
 
     public void FinishedClicked(ActionEvent actionEvent) {
 
-        RWJsonUser.firstName = txtBoxFN.getText();
-        RWJsonUser.lastName = txtBoxLN.getText();
-        RWJsonUser.sGrade = comboGrade.getSelectionModel().toString();
-        RWJsonUser.sIsd = txtBoxISD.getText();
-        RWJsonUser.getComputerName(false);
-        RWJsonUser.getOSVersion();
-        RWJsonUser.rootPathMaker();
-        RWJsonUser.jsonPathMaker("User");
-        RWJsonUser.setupCom = "true";
+        rwjsu.firstName = txtBoxFN.getText();
+        rwjsu.lastName = txtBoxLN.getText();
+        rwjsu.sGrade = comboGrade.getSelectionModel().toString();
+        rwjsu.sIsd = txtBoxISD.getText();
+        rwjsu.getComputerName(false);
+        rwjsu.getOSVersion();
+        rwjsu.rootPathMaker();
+        rwjsu.jsonPathMaker("User");
+        rwjsu.setupCom = "true";
 
-        RWJsonUser.WriteToJson();
-        RWJsonUser.ReadToJson();
+        rwjsu.WriteToJson();
+        rwjsu.ReadToJson();
 
         buildSaveSys();
 
@@ -81,8 +83,8 @@ public class SetupCon {
 
         //Path source = null;
         System.out.println("Hello 1");
-        RWJsonUser.getOSVersion();
-        String OS = RWJsonUser.osName;
+        rwjsu.getOSVersion();
+        String OS = rwjsu.osName;
         String fullPath;
         if (OS.equals("Windows 10") || OS.equals("Windows 8") || OS.equals("Windows 7")) {
             fullPath = "C:\\Test\\TA\\Data\\"+fileName;

@@ -5,33 +5,36 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Map;
 
 public class RWJsonUser {
 
     // Might need to be static
-    public static String firstName = null;
-    public static String lastName = null;
-    public static String sGrade = null;
-    public int iGrade = Integer.parseInt(sGrade);
-    public static String sIsd = null;
-    public int iIsd = Integer.parseInt(sIsd);
-    public static String PCName = null;
-    public static String PCNAME= null;
-    public static String setupCom = "false";
+    public String firstName = null;
+    public String lastName = null;
+    public String sGrade = null;
+    //public int iGrade = Integer.parseInt(sGrade);
+    public String sIsd = null;
+    //public int iIsd = Integer.parseInt(sIsd);
+    public String PCName = null;
+    public String PCNAME= null;
+    public String setupCom = "false";
     public boolean bSetupCom = false;
 
-    public static String osName;
-    public static Boolean fileUserExists;
-    public static Boolean folderUserExists;
-    public static String finalPath;
-    public static Boolean isWin;
-    public static String UserFilePath;
+    public String osName;
+    public Boolean fileUserExists;
+    public Boolean folderUserExists;
+    public String finalPath;
+    public Boolean isWin;
+    public String UserFilePath;
 
 
     @SuppressWarnings("unchecked")
-    public static void WriteToJson() {
+    public void WriteToJson() {
 
         //First user
         JSONObject userDetails = new JSONObject();
@@ -64,7 +67,7 @@ public class RWJsonUser {
     }
 
     @SuppressWarnings("unchecked")
-    public static void ReadToJson() { //Static might be optional -------------------------------------------------------------------
+    public void ReadToJson() { //Static might be optional -------------------------------------------------------------------
 
 
         //JSON parser object to parse read file
@@ -81,17 +84,13 @@ public class RWJsonUser {
             //Iterate over user array
             userList.forEach( emp -> parseUserObject( (JSONObject) emp ) );
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
+        } catch (ParseException | IOException e) {
             e.printStackTrace();
         }
 
     }
 
-    private static void parseUserObject(JSONObject user)
+    private void parseUserObject(JSONObject user)
     {
         //Get user object within list
         JSONObject userObject = (JSONObject) user.get("user");
@@ -129,7 +128,7 @@ public class RWJsonUser {
     }
 
 
-    public static void getComputerName(Boolean test) //-----------------------------GET COMPUTER NAME--------------------------
+    public void getComputerName(Boolean test) //-----------------------------GET COMPUTER NAME--------------------------
     {
         String PCnameStr;
 
@@ -149,7 +148,7 @@ public class RWJsonUser {
         }
     }
 
-    public static String getOSVersion() { //----------------------------------GET OS VERSION--------------------------------
+    public String getOSVersion() { //----------------------------------GET OS VERSION--------------------------------
         String os_name = null;
         os_name = System.getProperty("os.name");
         System.out.println("OS name is: " + os_name); //PRINT OS name is
@@ -159,7 +158,7 @@ public class RWJsonUser {
 
 
 
-    public static void rootPathMaker() {//-------------------------------------PATH MAKER-------------------------------------
+    public void rootPathMaker() {//-------------------------------------PATH MAKER-------------------------------------
         String homePath;
         if (osName.equals("Windows 10") || osName.equals("Windows 8") || osName.equals("Windows 7")) {
             homePath = "C:\\Test\\TA\\Data";
@@ -175,7 +174,7 @@ public class RWJsonUser {
         finalPath = homePath;
     }
 
-    public static void jsonPathMaker(String name) { //----------------------------JSON PATH MAKER---------------------------------
+    public void jsonPathMaker(String name) { //----------------------------JSON PATH MAKER---------------------------------
         String tempPath = "";
         if (osName.equals("Windows 10") || osName.equals("Windows 8") || osName.equals("Windows 7")) {
             tempPath = finalPath + "\\";
@@ -183,17 +182,15 @@ public class RWJsonUser {
             tempPath = finalPath + "/";
         }
 
-        switch(name) {
-            case "User":
-                UserFilePath = tempPath + name+".json";
-                break;
-            default:
-                System.out.println("jsonPathMaker can't detect file name"); //PRINT JPM cant detect file name
+        if ("User".equals(name)) {
+            UserFilePath = tempPath + name + ".json";
+        } else {
+            System.out.println("jsonPathMaker can't detect file name"); //PRINT JPM cant detect file name
         }
         System.out.println(name +" JSON file path is: " +UserFilePath); //PRINT finalPath
     }
 
-    public static void userFileExists(String path) {// --------------------USER FILE EXISTS-------------------------
+    public void userFileExists(String path) {// --------------------USER FILE EXISTS-------------------------
 
         boolean temp = new File(path).isFile();
         System.out.println("User file exists: " + temp); //PRINT User file exists
@@ -202,13 +199,14 @@ public class RWJsonUser {
 
 
 
-    public static void clearUserData() {
-        firstName = null;
+    public void clearUserData() {
+        /*firstName = null;
         lastName = null;
         sGrade = null;
         sIsd = null;
         PCName = null;
         setupCom = null;
-        WriteToJson();
+
+        //WriteToJson();*/
     }
 }

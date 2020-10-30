@@ -42,12 +42,24 @@ public class CommunicationCon {
 
     List<String> listMid = new ArrayList<String>();//List of replaced id-to-username
 
+    List<Integer> rsUserid = new ArrayList<Integer>();
+    List<String> rsMessage = new ArrayList<String>();
+    List<Integer> rsTime = new ArrayList<Integer>();
+    List<Integer> rsID = new ArrayList<Integer>();
+
+    String localname;
+    String localID;
+
 
     public void initialize() {
         //SqliteConnection sqlConn = new SqliteConnection();
         //connection = sqlConn.dbConnector("ProjectPlanner");
 
         //showProject();
+        localID = "991";
+        localname = "Ty";
+        settingInfoLbl.setText("#" + localID);
+        settingInfoTf.setText(localname);
 
     }
 
@@ -65,7 +77,7 @@ public class CommunicationCon {
     }
 
     public void onActionChatAutoRefBtn(ActionEvent actionEvent) {
-        ///*
+        /*
         getUserList();
         getChatList();
         System.out.println(listid);
@@ -75,7 +87,11 @@ public class CommunicationCon {
         //*/
         //listTest();
         //replaceNames();
-        loadNames();
+        //loadNames();
+        String ert = (java.time.LocalTime.now()).toString();
+        //TODO remove symbols and num to make an integer
+        System.out.println(ert);
+
     }
 
     public ObservableList<ChatCL> getChatList(){ //--------------------------------------------------
@@ -86,10 +102,13 @@ public class CommunicationCon {
         Statement st = null; //Use prepare statement for repetitive scripts
         ResultSet rs = null;
 
+        /*
         List<Integer> rsUserid = new ArrayList<Integer>();
         List<String> rsMessage = new ArrayList<String>();
         List<Integer> rsTime = new ArrayList<Integer>();
         List<Integer> rsID = new ArrayList<Integer>();
+
+         */
 
         try{
             st = conn.createStatement();
@@ -212,6 +231,52 @@ public class CommunicationCon {
         chatTable.setItems(list);
 
     }
+
+
+    private void executeQuery(String query) {
+        //Connection conn = getConnection();
+
+        Connection conn = Con.sqliteCon("test");
+
+        Statement st = null;
+        try {
+            st = conn.createStatement();
+            st.executeUpdate(query);
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }finally {
+            try {
+                st.close();
+                conn.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
+    }
+
+    /*
+    private void insertRecord() {
+        int msgIdLength = rsID.size() + 2;
+
+        String query = "INSERT INTO "+"Messages"+" (ID,User,userID,Message,Time) VALUES ("+msgIdLength+",'"+ localname + "','" + localID + "','"+chatSendTf+"',"++")";
+        executeQuery(query);
+        showTabs();
+    }
+
+    private void updateRecord() {
+        String query = "UPDATE "+tabLv.getSelectionModel().getSelectedItem()+" SET name = '" + tabTfName.getText() + "', url = '" + tabTfUrl.getText() + "' WHERE name = '" + tabTfName.getText() + "' OR url = '" +tabTfUrl.getText()+ "'";
+        executeQuery(query);
+        showTabs();
+    }
+
+    private void deleteRecord() {
+        String query = "DELETE FROM "+tabLv.getSelectionModel().getSelectedItem()+" WHERE name = '" + tabTfName.getText() + "'";
+        executeQuery(query);
+        showTabs();
+    }
+    //*/
+
 
 
     /*
